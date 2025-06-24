@@ -37,5 +37,4 @@ JavaScript - Funcionalidades básicas e interatividade.
 
 Git & GitHub Pages - Versionamento de código e hospedagem da página.
 
-🔗 Acesse meu portfólio online:
-👉 gabrielc-neto.github.io/portfolio
+👉 Acesse meu portfólio online clicando <a href="gabrielc-neto.github.io/portfolio">Clique aqui</a>
