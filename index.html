@@ -21,8 +21,8 @@
           <a href="#home">Gabriel C<span class="text-emerald-400">.</span></a>
         </div>
         <ul class="hidden md:flex space-x-8 font-medium">
-          <li><a href="#home" class="hover:text-emerald-400">Início</a></li>
-          <li><a href="#about" class="hover:text-emerald-400">Sobre</a></li>
+          <li><a href="#home" class="hover:text-emerald-400 enabled:underline">Início</a></li>
+          <li><a href="#about" class="hover:text-emerald-400 ">Sobre</a></li>
           <li>
             <a href="#projects" class="hover:text-emerald-400">Projetos</a>
           </li>
@@ -66,7 +66,7 @@
           Informação
         </p>
         <a
-          href="#projects"
+          href="https://drive.google.com/uc?export=download&id=1l_lhN9qAvAWiuxwU4IBqtdWRHbPuB9bo"
           class="flex items-center justify-center gap-2 bg-emerald-700 px-6 py-3 w-48 rounded-xl hover:bg-emerald-500 hover:text-gray-900 transition-all shadow-md mx-auto"
         >
           <svg
@@ -90,7 +90,7 @@
     </section>
     <!-- Sobre -->
     <section id="about" class="max-w-6xl mx-auto px-4 py-20">
-      <h2 class="text-4xl font-bold mb-8 text-center">Sobre Mim</h2>
+      <h2 class="text-4xl font-bold mb-8 text-center text-emerald-400">Sobre Mim</h2>
       <div class="md:flex md:items-center md:space-x-10">
         <div class="md:w-1/2">
           <p class="text-lg leading-relaxed">
@@ -100,7 +100,7 @@
           </p>
           <p class="mt-4">
             Atualmente desenvolvo projetos com
-            <span class="text-sky-400"
+            <span class="text-emerald-300"
               >HTML, CSS, JavaScript, Tailwind, React, Node.js e outras
               tecnologias.</span
             >
@@ -108,41 +108,62 @@
         </div>
         <div class="md:w-1/2 mt-10 md:mt-0">
           <img
-            src="https://i.redd.it/yrwhskksre381.jpg"
+            src="https://i.pinimg.com/736x/7b/f5/a2/7bf5a2f2b17e1441a90b8dfbf1517d7a.jpg"
             alt="Imagem sobre mim"
             class="rounded-lg shadow-lg"
           />
         </div>
       </div>
     </section>
-
     <!-- Projetos -->
     <section id="projects" class="bg-slate-900 py-20 px-4">
-      <h2 class="text-4xl font-bold mb-10 text-center">Projetos</h2>
-      <div class="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-6xl mx-auto">
-        <div
-          class="bg-slate-800 p-6 rounded-lg shadow hover:scale-105 transition"
-        >
-          <h3 class="text-2xl font-semibold mb-2">Projeto 1</h3>
-          <p class="mb-4">Finja que tem algo aqui.</p>
-          <a href="#" class="text-sky-400 hover:underline">Ver Projeto →</a>
-        </div>
-        <div
-          class="bg-slate-800 p-6 rounded-lg shadow hover:scale-105 transition"
-        >
-          <h3 class="text-2xl font-semibold mb-2">Projeto 2</h3>
-          <p class="mb-4">Finja que tem algo aqui.</p>
-          <a href="#" class="text-sky-400 hover:underline">Ver Projeto →</a>
-        </div>
-        <div
-          class="bg-slate-800 p-6 rounded-lg shadow hover:scale-105 transition"
-        >
-          <h3 class="text-2xl font-semibold mb-2">Projeto 3</h3>
-          <p class="mb-4">Finja que tem algo aqui.</p>
-          <a href="#" class="text-sky-400 hover:underline">Ver Projeto →</a>
-        </div>
-      </div>
-    </section>
+  <h2 class="text-4xl font-bold mb-10 text-center text-emerald-400">Projetos</h2>
+  <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 max-w-6xl mx-auto">
+
+    <div class="bg-slate-800 p-6 rounded-lg shadow hover:scale-105 transition">
+      <h3 class="text-2xl font-semibold mb-2">Sistema Médico</h3>
+      <p class="mb-4">
+        Sistema web para gerenciamento de clínicas, com cadastro de pacientes, agendamentos e controle de consultas.
+      </p>
+      <a href="https://github.com/gabrielc-neto/sistema-medico" target="_blank" class="text-sky-400 hover:underline">
+        Ver Projeto →
+      </a>
+    </div>
+
+    <div class="bg-slate-800 p-6 rounded-lg shadow hover:scale-105 transition">
+      <h3 class="text-2xl font-semibold mb-2">Sistema Automatizado</h3>
+      <p class="mb-4">
+        Plataforma automatizada para processos internos, otimizando tarefas e facilitando o gerenciamento de dados.
+      </p>
+      <a href="https://github.com/gabrielc-neto/sistema-automatizado" target="_blank" class="text-sky-400 hover:underline">
+        Ver Projeto →
+      </a>
+    </div>
+
+    <div class="bg-slate-800 p-6 rounded-lg shadow hover:scale-105 transition">
+      <h3 class="text-2xl font-semibold mb-2">Runa</h3>
+      <p class="mb-4">
+        Projeto experimental que explora conceitos de desenvolvimento ágil, automação e sistemas inteligentes.
+      </p>
+      <a href="https://github.com/gabrielc-neto/Runa" target="_blank" class="text-sky-400 hover:underline">
+        Ver Projeto →
+      </a>
+    </div>
+
+    <div class="bg-slate-800 p-6 rounded-lg shadow hover:scale-105 transition">
+      <h3 class="text-2xl font-semibold mb-2">Gerenciador de Tarefas</h3>
+      <p class="mb-4">
+        Aplicação para organização de tarefas, com criação, edição, conclusão e exclusão de atividades. Ideal para melhorar a produtividade.
+      </p>
+      <a href="https://github.com/gabrielc-neto/gerenciador-de-tarefas" target="_blank" class="text-sky-400 hover:underline">
+        Ver Projeto →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
 
     <!-- Habilidades -->
     <section id="skills" class="max-w-6xl mx-auto px-4 py-20">
@@ -214,6 +235,12 @@
           Express.js
         </div>
         <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
+          Laravel
+        </div>
+        <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
+          Bootstrap
+        </div>
+        <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
           Prisma ORM
         </div>
       </div>
@@ -242,10 +269,13 @@
           VSCode
         </div>
         <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
-          Linux (Terminal e Configurações)
+          Linux Ubuntu / Kali(Terminal e Configurações)
         </div>
         <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
           Vercel / Netlify
+        </div>
+        <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
+          Wordpress
         </div>
       </div>
 
@@ -264,7 +294,7 @@
           Redes de Computadores
         </div>
         <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
-          Protocolos TCP/IP
+          Configurações de Servidores Web e DHCP
         </div>
         <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
           Pensamento Computacional
@@ -294,90 +324,175 @@
         <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
           React Js
         </div>
+        <div class="bg-slate-800 p-5 rounded-lg shadow hover:bg-emerald-500">
+          C#  
+        </div>
       </div>
     </section>
 
     <!-- Contato -->
     <section id="contact" class="bg-slate-900 py-20 px-4">
-      <h2 class="text-4xl font-bold mb-10 text-center">Contato (demo)</h2>
-      <div class="max-w-xl mx-auto">
-        <form class="space-y-6">
-          <input
-            type="text"
-            placeholder="Seu nome"
-            class="w-full p-3 rounded bg-slate-800 text-white focus:outline-none"
-          />
-          <input
-            type="email"
-            placeholder="Seu e-mail"
-            class="w-full p-3 rounded bg-slate-800 text-white focus:outline-none"
-          />
-          <textarea
-            placeholder="Sua mensagem"
-            rows="5"
-            class="w-full p-3 rounded bg-slate-800 text-white focus:outline-none"
-          ></textarea>
-          <button
-            type="submit"
-            class="w-full bg-sky-500 p-3 rounded hover:bg-sky-600 transition"
-          >
-            Enviar
-          </button>
-        </form>
-        <div class="mt-8 text-center">
-          <p>Ou fale comigo nas redes:</p>
-          <!-- Dados do Bootstrap Icons abaixo :) -->
-          <div class="flex justify-center space-x-6 mt-4">
-            <a href="#" class="hover:text-sky-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-linkedin"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                />
-              </svg>
-            </a>
+  <h2 class="text-4xl font-bold mb-10 text-center text-emerald-400">
+    Contato (Formulário Demo)
+  </h2>
+  <div class="max-w-xl mx-auto">
+    <form
+      action="https://formsubmit.co/gabrielneto327@gmail.com"
+      method="POST"
+      class="space-y-6"
+    >
+      <!-- Proteções -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="Novo Contato do Portfólio!" />
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://gabrielc-neto.github.io/portfolio/thanks.html" />
 
-            <a href="#" class="hover:text-sky-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-github"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                />
-              </svg>
-            </a>
-            <a href="#" class="hover:text-green-400">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-whatsapp"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
+      <!-- Campos -->
+      <input
+        type="text"
+        name="name"
+        placeholder="Seu nome"
+        required
+        class="w-full p-3 rounded bg-slate-800 text-white focus:outline-none"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Seu e-mail"
+        required
+        class="w-full p-3 rounded bg-slate-800 text-white focus:outline-none"
+      />
+      <textarea
+        name="message"
+        placeholder="Sua mensagem"
+        rows="5"
+        required
+        class="w-full p-3 rounded bg-slate-800 text-white focus:outline-none"
+      ></textarea>
+
+      <!-- Botão -->
+      <button
+        type="submit"
+        class="w-full bg-emerald-500 p-3 rounded hover:bg-emerald-600 transition"
+      >
+        Enviar
+      </button>
+    </form>
+    <!-- Redes sociais -->
+    <div class="mt-8 text-center">
+      <p class="text-white">Ou fale comigo nas redes:</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <!-- LinkedIn -->
+        <a
+          href="https://linkedin.com/in/gabriel-correa-neto"
+          class="hover:text-blue-500 hover:scale-125 transition-transform duration-200"
+          target="_blank"
+          aria-label="LinkedIn"
+          title="LinkedIn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-linkedin"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513
+              16 1.146v13.708c0 .633-.526 1.146-1.175
+              1.146H1.175C.526 16 0 15.487 0
+              14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837
+              0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4
+              3.226 2.4 3.934c0 .694.521 1.248
+              1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878
+              1.232-.878.869 0 1.216.662 1.216
+              1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274
+              0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678
+              0 7.225 0 7.225z"
+            />
+          </svg>
+        </a>
+
+        <!-- GitHub -->
+        <a
+          href="https://github.com/gabrielc-neto"
+          class="hover:text-gray-200 hover:scale-125 transition-transform duration-200"
+          target="_blank"
+          aria-label="GitHub"
+          title="GitHub"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-github"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58
+              0 8c0 3.54 2.29 6.53 5.47
+              7.59.4.07.55-.17.55-.38
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+              1.08.58 1.23.82.72 1.21 1.87.87
+              2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+              0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+              0 0 .67-.21 2.2.82.64-.18 1.32-.27
+              2-.27s1.36.09 2 .27c1.53-1.04
+              2.2-.82 2.2-.82.44 1.1.16
+              1.92.08 2.12.51.56.82 1.27.82
+              2.15 0 3.07-1.87 3.75-3.65
+              3.95.29.25.54.73.54 1.48
+              0 1.07-.01 1.93-.01 2.2
+              0 .21.15.46.55.38A8.01 8.01
+              0 0 0 16 8c0-4.42-3.58-8-8-8"
+            />
+          </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/5597981110322"
+          class="hover:text-green-400 hover:scale-125 transition-transform duration-200"
+          target="_blank"
+          aria-label="WhatsApp"
+          title="WhatsApp"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-whatsapp"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M13.601 2.326A7.85 7.85 0 0 0
+              7.994 0C3.627 0 .068
+              3.558.064 7.926c0 1.399.366
+              2.76 1.057 3.965L0
+              16l4.204-1.102a7.9 7.9 0 0 0
+              3.79.965h.004c4.368 0
+              7.926-3.558 7.93-7.93A7.9 7.9
+              0 0 0 13.6 2.326zM7.994
+              14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56
+              6.56 0 0 1-1.007-3.505c0-3.626
+              2.957-6.584 6.591-6.584a6.56
+              6.56 0 0 1 4.66 1.931 6.56 6.56
+              0 0 1 1.928 4.66c-.004 3.639-2.961
+              6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+            />
+          </svg>
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
     <!-- Footer -->
     <footer class="bg-slate-950 text-center p-4">
-      <p>&copy; 2025 Gabriel Corrêa. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Gabriel C<span class="text-emerald-400">.</span> Todos os direitos reservados.</p>
     </footer>
     <!-- Script pro menu mobile -->
     <script>
