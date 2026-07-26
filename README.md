@@ -1,73 +1,91 @@
-# 🌐 Meu Portfólio - Gabriel Corrêa Neto
+# Portfólio — Gabriel Corrêa
 
-## 📌 Descrição
+Portfólio pessoal de **Gabriel Corrêa**, desenvolvedor full stack com foco em
+infraestrutura. Página única, estática, sem build e sem dependências de runtime.
 
-Este projeto é uma **Landing Page pessoal** que tem como objetivo:
-
-- 📖 Praticar e consolidar conhecimentos em desenvolvimento web.
-- 🚀 Apresentar minhas habilidades, projetos e trajetória profissional.
-- 🔥 Estimular o aprendizado contínuo e demonstrar minhas capacidades técnicas e criativas.
-
-A página foi desenvolvida com foco em um layout responsivo, navegação fluida e design moderno.
+🔗 **[gabrielc-neto.github.io/portfolio](https://gabrielc-neto.github.io/portfolio/)**
 
 ---
 
-## 🧠 Funcionalidades
+## Seções
 
-- **Página única (Landing Page)**, contendo as seções:
-
-### 🔹 [Início](https://gabrielc-neto.github.io/portfolio/#home)
-Apresentação sucinta sobre mim, área de atuação e um botão para download do currículo.
-
-### 🔹 [Sobre](https://gabrielc-neto.github.io/portfolio/#about)
-Seção com informações detalhadas sobre minha trajetória, interesses, formação e evolução na área de tecnologia.
-
-### 🔹 [Projetos](https://gabrielc-neto.github.io/portfolio/#projects)
-Demonstração dos meus principais projetos, com descrição, tecnologias utilizadas e links para repositórios ou demonstrações.
-
-### 🔹 [Habilidades](https://gabrielc-neto.github.io/portfolio/#skills)
-Apresentação das linguagens, frameworks e ferramentas que domino ou estou aprendendo.
-
-### 🔹 [Contato](https://gabrielc-neto.github.io/portfolio/#contact)
-Formas de entrar em contato comigo, como email, LinkedIn, GitHub e outras redes.
+| Seção | Conteúdo |
+| --- | --- |
+| [Início](https://gabrielc-neto.github.io/portfolio/#home) | Apresentação, resumo do perfil e download do currículo |
+| [Sobre](https://gabrielc-neto.github.io/portfolio/#about) | Trajetória e forma de trabalho |
+| [Projetos](https://gabrielc-neto.github.io/portfolio/#projects) | Sistemas em produção e projetos próprios, com filtro por categoria |
+| [Stack](https://gabrielc-neto.github.io/portfolio/#skills) | Tecnologias agrupadas por camada (front, back, dados, infra) |
+| [Contato](https://gabrielc-neto.github.io/portfolio/#contact) | Formulário e canais diretos |
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Stack do site
 
-- **HTML5** – Estrutura semântica da página.
-- **CSS3 + TailwindCSS** – Estilização moderna, responsiva e com design limpo.
-- **JavaScript** – Funcionalidades básicas e interatividade.
-- **Vite** – Ferramenta de desenvolvimento para empacotamento e build.
-- **Git & GitHub Pages** – Versionamento de código e hospedagem da página.
+- **HTML5** semântico, com meta tags de SEO, Open Graph e JSON-LD (`schema.org/Person`).
+- **CSS3 puro** com custom properties — sem framework, sem etapa de build.
+- **JavaScript vanilla** — menu, scroll spy, filtro de projetos e animações de entrada.
+- **particles.js** (CDN) apenas como plano de fundo decorativo.
+- **GitHub Pages** para hospedagem, **FormSubmit** para o formulário de contato.
+
+### Identidade visual
+
+Três cores de marca, definidas como custom properties no topo de `styles.css`.
+Todos os demais tons (superfícies, bordas, texto secundário) são degraus derivados delas.
+
+| Cor | Hex | Uso |
+| --- | --- | --- |
+| Base | `#030712` | Fundo, texto sobre o acento |
+| Claro | `#f4f6fc` | Texto principal |
+| Acento | `#4ade80` | Destaques, links, botões primários |
+
+### Decisões de projeto
+
+- Respeita `prefers-reduced-motion`: animações e partículas são desligadas.
+- Partículas também não carregam em telas pequenas — não vale o custo de render.
+- Sem imagens pesadas: ícones e favicon são SVG inline.
 
 ---
 
-## 🔗 Acesse meu portfólio online:
+## Estrutura
 
-👉 **[gabrielc-neto.github.io/portfolio](https://gabrielc-neto.github.io/portfolio/)**
+```
+.
+├── index.html      # página principal
+├── thanks.html     # confirmação de envio do formulário
+├── styles.css      # design tokens + estilos
+├── script.js       # interações
+└── favicon.svg
+```
 
 ---
 
-## 🛠️ Como rodar localmente
+## Rodando localmente
 
-1. Clone o repositório:
+Não há dependências para instalar. Clone e sirva a pasta:
+
 ```bash
 git clone https://github.com/gabrielc-neto/portfolio.git
-
-```
-2. Acesse a pasta do projeto:
-```bash
 cd portfolio
+
+# qualquer servidor estático serve; por exemplo:
+python -m http.server 5500
 ```
-3. Rode localmente (não é necessário baixar dependências via CDN
 
-## 📜 Licença
-Este projeto está licenciado sob a MIT License — sinta-se livre para utilizá-lo, modificá-lo e aprimorá-lo.
+Acesse `http://localhost:5500`.
 
-## 🤝 Contato
-🌐 Meu LinkedIn: linkedin.com/in/gabrielc-neto
+> Abrir o `index.html` direto pelo navegador (`file://`) também funciona,
+> mas usar um servidor evita diferenças de comportamento em caminhos relativos.
 
-📧 gabrielmirandaneto@hotmail.com
+---
 
-💻 Meu GitHub: @gabrielc-neto
+## Licença
+
+MIT — sinta-se livre para usar como referência.
+
+---
+
+## Contato
+
+- 🌐 [linkedin.com/in/gabrielc-neto](https://linkedin.com/in/gabrielc-neto)
+- 💻 [github.com/gabrielc-neto](https://github.com/gabrielc-neto)
+- 📧 gabrielneto327@gmail.com

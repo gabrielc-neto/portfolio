@@ -1,403 +1,1035 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gabriel Corrêa</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>Gabriel Corrêa — Desenvolvedor Full Stack & Infraestrutura</title>
+  <meta name="description"
+    content="Desenvolvedor full stack e infraestrutura. Construo e mantenho sistemas web em produção com React, PHP, Laravel, Node.js, Firebase, Docker e servidores Linux." />
+  <meta name="author" content="Gabriel Corrêa" />
+  <meta name="theme-color" content="#030712" />
+  <link rel="canonical" href="https://gabrielc-neto.github.io/portfolio/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://gabrielc-neto.github.io/portfolio/" />
+  <meta property="og:title" content="Gabriel Corrêa — Desenvolvedor Full Stack & Infraestrutura" />
+  <meta property="og:description"
+    content="Construo e mantenho sistemas web em produção: do front-end em React ao deploy em VPS Linux." />
+  <meta property="og:image" content="https://gabrielc-neto.github.io/portfolio/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gabriel Corrêa — Desenvolvedor Full Stack & Infraestrutura" />
+  <meta name="twitter:description"
+    content="Construo e mantenho sistemas web em produção: do front-end em React ao deploy em VPS Linux." />
+
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
-    rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-    }
-    #particles-js {
-  position: fixed; /* Alterado de absolute para fixed */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("");
-      background-repeat: no-repeat;
-      background-color:#000000;
-      background-size: cover;
-      background-position: 110% 50%;
-      z-index: -1; /* Adicionado para ficar atrás do conteúdo */
-}
-  </style>
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gabriel Corrêa",
+    "url": "https://gabrielc-neto.github.io/portfolio/",
+    "jobTitle": "Analista e Desenvolvedor de Sistemas",
+    "email": "mailto:gabrielneto327@gmail.com",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Pontual Brasil Petróleo"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "IFPR — Instituto Federal do Paraná"
+    },
+    "sameAs": [
+      "https://github.com/gabrielc-neto",
+      "https://linkedin.com/in/gabrielc-neto"
+    ],
+    "knowsAbout": [
+      "React", "JavaScript", "TypeScript", "PHP", "Laravel", "Node.js",
+      "MySQL", "PostgreSQL", "Firebase", "Docker", "Linux", "Nginx"
+    ]
+  }
+  </script>
 </head>
 
-<body class="bg-gray-950 text-gray-200 antialiased">
-  <div id="particles-js"></div>
-  <header class="w-full bg-gray-950 shadow-xl fixed top-0 z-50">
-    <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-      <div class="text-3xl font-extrabold tracking-tight">
-        <a href="#home" class="text-gray-100">Gabriel C<span class="text-green-400">.</span></a>
-      </div>
-      <ul class="hidden md:flex space-x-10 font-medium text-lg">
-        <li><a href="#about" class="hover:text-green-400 transition-colors duration-300">Sobre</a></li>
-        <li><a href="#home" class="hover:text-green-400 transition-colors duration-300">Início</a></li>
-        <li>
-          <a href="#projects" class="hover:text-green-400 transition-colors duration-300">Projetos</a>
-        </li>
-        <li>
-          <a href="#skills" class="hover:text-green-400 transition-colors duration-300">Habilidades</a>
-        </li>
-        <li><a href="#contact" class="hover:text-green-400 transition-colors duration-300">Contato</a></li>
+<body>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div id="particles-js" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ===================================================== cabeçalho === -->
+  <header class="site-header" id="site-header">
+    <nav class="wrap nav" aria-label="Navegação principal">
+      <a class="brand" href="#home">gabriel<span>.</span>dev</a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
-      <div class="md:hidden">
-        <button id="menu-button" class="text-green-100 text-3xl focus:outline-none">☰</button>
-      </div>
+
+      <a class="nav-cta"
+        href="https://drive.google.com/uc?export=download&id=1eCi0nz2b_INW33COd1IhaNoQOS-16bRF">Currículo</a>
+
+      <button class="menu-toggle" id="menu-button" aria-expanded="false" aria-controls="mobile-menu"
+        aria-label="Abrir menu">
+        <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
     </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-900 px-6 pb-4">
-      <ul class="space-y-3 text-lg">
-        <li><a href="#home" class="block hover:text-green-400 transition-colors duration-300">Início</a></li>
-        <li><a href="#about" class="block hover:text-green-400 transition-colors duration-300">Sobre</a></li>
-        <li>
-          <a href="#projects" class="block hover:text-green-400 transition-colors duration-300">Projetos</a>
-        </li>
-        <li>
-          <a href="#skills" class="block hover:text-green-400 transition-colors duration-300">Habilidades</a>
-        </li>
-        <li>
-          <a href="#contact" class="block hover:text-green-400 transition-colors duration-300">Contato</a>
-        </li>
-      </ul>
-    </div>
   </header>
 
-  <section id="home" class="min-h-screen flex items-center justify-center text-center px-4 pt-20 pb-10">
-    <div class="max-w-4xl text-center animate-fade-in-up">
-      <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight text-gray-100">
-        Olá, eu sou <span class="text-green-400">Gabriel Corrêa</span>
-      </h1>
-      <p class="text-xl md:text-2xl mb-8 text-gray-300">
-        Desenvolvedor Full Stack &amp; Estudante de Tecnologia da Informação
-      </p>
-      <a href="https://drive.google.com/uc?export=download&id=1eCi0nz2b_INW33COd1IhaNoQOS-16bRF"
-        class="inline-flex items-center justify-center gap-2 bg-green-600 px-8 py-4 rounded-full text-lg font-semibold text-white hover:bg-green-500 transition-all shadow-lg transform hover:scale-105">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-          <path
-            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-          <path
-            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-        </svg>
-        Baixar Currículo
-      </a>
-    </div>
-  </section>
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <ul>
+      <li><a href="#home">Início</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#trajetoria">Trajetória</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#contact">Contato</a></li>
+      <li><a href="https://drive.google.com/uc?export=download&id=1eCi0nz2b_INW33COd1IhaNoQOS-16bRF">Baixar
+          currículo</a></li>
+    </ul>
+  </div>
 
-  <section id="about" class="max-w-7xl mx-auto px-6 py-24">
-    <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-green-400">Sobre Mim</h2>
-    <div class="md:flex md:items-center md:space-x-12">
-      <div class="md:w-1/2">
-        <p class="text-xl leading-relaxed text-gray-300">
-          Sou um desenvolvedor apaixonado por tecnologia e inovação, com a missão de transformar ideias em soluções
-          digitais elegantes e eficientes. Minha abordagem se concentra em criar experiências de usuário intuitivas,
-          focando em performance e acessibilidade.
+  <main id="main">
+
+    <!-- ======================================================== hero === -->
+    <section id="home" class="hero">
+      <div class="wrap hero-inner">
+        <span class="status-pill">
+          <span class="status-dot" aria-hidden="true"></span>
+          Disponível para novos projetos
+        </span>
+
+        <h1>
+          <span class="line">Olá, eu sou</span>
+          <span class="line accent">Gabriel Corrêa</span>
+        </h1>
+
+        <p class="hero-role">
+          Full Stack <span class="sep">/</span> Infraestrutura <span class="sep">/</span> DevOps
         </p>
-        <p class="mt-6 text-xl text-gray-300">
-          Atualmente, minha paixão me leva a desenvolver projetos robustos e modernos, utilizando tecnologias como
-          <span class="text-green-300 font-semibold">HTML, CSS, JavaScript, Tailwind CSS, React e Node.js.</span> Estou
-          sempre em busca de novos desafios e conhecimentos para aprimorar minhas habilidades.
+
+        <p class="hero-desc">
+          Construo sistemas web e cuido deles até o servidor. Do componente em React ao container
+          em produção numa VPS Linux — passando por banco de dados, deploy e manutenção.
         </p>
-      </div>
-      <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-        <img
-          src="Gatazano.png"
-          alt="Foto de um gatinho aleatório"
-          class="rounded-lg shadow-xl border-4 border-gray-800 transform transition-transform hover:scale-105" width="400" height="400" />
-      </div>
-    </div>
-  </section>
 
-  <section id="projects" class="bg-gray-950 py-24 px-6">
-    <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-green-400">Projetos</h2>
-    <div class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-7xl mx-auto">
-      <div
-        class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <h3 class="text-3xl font-semibold mb-3 text-white">Sistema Médico</h3>
-        <p class="mb-5 text-gray-300">
-          Um sistema web completo para gerenciamento de clínicas, otimizando o fluxo de trabalho desde o agendamento de
-          consultas até o controle de prontuários.
-        </p>
-        <a href="https://github.com/gabrielc-neto/sistema-medico" target="_blank"
-          class="inline-flex items-center text-green-400 font-semibold hover:text-green-300 transition-colors duration-300">
-          Ver Projeto
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              d="M11 3a1 1 0 100 2h3.586L6.293 12.293a1 1 0 101.414 1.414L15 6.414V10a1 1 0 102 0V4a1 1 0 00-1-1h-6zM5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z">
-            </path>
-          </svg>
-        </a>
-      </div>
-
-      <div
-        class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <h3 class="text-3xl font-semibold mb-3 text-white">Sistema Automatizado</h3>
-        <p class="mb-5 text-gray-300">
-          Plataforma inovadora para otimização de processos internos, reduzindo o trabalho manual e garantindo a
-          integridade dos dados através de automação inteligente.
-        </p>
-        <a href="https://github.com/gabrielc-neto/sistema-automatizado" target="_blank"
-          class="inline-flex items-center text-green-400 font-semibold hover:text-green-300 transition-colors duration-300">
-          Ver Projeto
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              d="M11 3a1 1 0 100 2h3.586L6.293 12.293a1 1 0 101.414 1.414L15 6.414V10a1 1 0 102 0V4a1 1 0 00-1-1h-6zM5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z">
-            </path>
-          </svg>
-        </a>
-      </div>
-
-      <div
-        class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <h3 class="text-3xl font-semibold mb-3 text-white">Runa</h3>
-        <p class="mb-5 text-gray-300">
-          Um projeto experimental que explora os limites do desenvolvimento ágil, inteligência artificial e sistemas
-          inteligentes para resolver desafios complexos.
-        </p>
-        <a href="https://github.com/gabrielc-neto/Runa" target="_blank"
-          class="inline-flex items-center text-green-400 font-semibold hover:text-green-300 transition-colors duration-300">
-          Ver Projeto
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              d="M11 3a1 1 0 100 2h3.586L6.293 12.293a1 1 0 101.414 1.414L15 6.414V10a1 1 0 102 0V4a1 1 0 00-1-1h-6zM5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z">
-            </path>
-          </svg>
-        </a>
-      </div>
-
-      <div
-        class="bg-gray-900 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <h3 class="text-3xl font-semibold mb-3 text-white">Gerenciador de Tarefas</h3>
-        <p class="mb-5 text-gray-300">
-          Uma aplicação intuitiva e robusta para organização pessoal e profissional, com funcionalidades completas de
-          criação, edição e gestão de atividades.
-        </p>
-        <a href="https://github.com/gabrielc-neto/gerenciador-de-tarefas" target="_blank"
-          class="inline-flex items-center text-green-400 font-semibold hover:text-green-300 transition-colors duration-300">
-          Ver Projeto
-          <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-            <path
-              d="M11 3a1 1 0 100 2h3.586L6.293 12.293a1 1 0 101.414 1.414L15 6.414V10a1 1 0 102 0V4a1 1 0 00-1-1h-6zM5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z">
-            </path>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="max-w-7xl mx-auto px-6 py-24">
-    <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-green-400">
-      Habilidades & Tecnologias
-    </h2>
-    <p class="text-center text-lg md:text-xl mb-12 text-gray-300 max-w-2xl mx-auto">
-      Minha jornada me equipou com um conjunto de habilidades e ferramentas para construir soluções de ponta.
-    </p>
-
-    <div class="space-y-16">
-      <div>
-        <h3 class="text-3xl font-semibold mb-8 text-center text-green-300">Linguagens</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            HTML5</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            CSS3</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            JavaScript</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            PHP</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            C</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            SQL</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Python</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            TypeScript</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Bash / Shell</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Java</div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="text-3xl font-semibold mb-8 text-center text-green-300">Frameworks & Bibliotecas</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            React.js</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Node.js</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Tailwind CSS</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Vite</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            BeeWare</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Flutter</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Express.js</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Laravel</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Bootstrap</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Prisma ORM</div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="text-3xl font-semibold mb-8 text-center text-green-300">Ferramentas & Tecnologias</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Git & GitHub</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Figma</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Nginx (Básico)</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            MySQL</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            PostgreSQL</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            VSCode</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Linux Ubuntu</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Vercel / Netlify</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Wordpress</div>
-        </div>
-      </div>
-
-      <div>
-        <h3 class="text-3xl font-semibold mb-8 text-center text-green-300">Em Aprendizado</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Cibersegurança</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Docker</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            Next.js</div>
-          <div
-            class="bg-gray-900 p-6 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition-colors duration-300">
-            C#</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="bg-gray-950 py-24 px-6">
-    <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-green-400">
-      Contato
-    </h2>
-    <div class="max-w-xl mx-auto">
-      <form action="https://formsubmit.co/gabrielneto327@gmail.com" method="POST" class="space-y-6">
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_subject" value="Novo Contato do Portfólio!" />
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://gabrielc-neto.github.io/portfolio/thanks.html" />
-
-        <input type="text" name="name" placeholder="Seu nome" required
-          class="w-full p-4 rounded-lg bg-gray-900 text-gray-200 border border-gray-700 focus:outline-none focus:border-green-400 transition-colors duration-300" />
-        <input type="email" name="email" placeholder="Seu e-mail" required
-          class="w-full p-4 rounded-lg bg-gray-900 text-gray-200 border border-gray-700 focus:outline-none focus:border-green-400 transition-colors duration-300" />
-        <textarea name="message" placeholder="Sua mensagem" rows="5" required
-          class="w-full p-4 rounded-lg bg-gray-900 text-gray-200 border border-gray-700 focus:outline-none focus:border-green-400 transition-colors duration-300"></textarea>
-
-        <button type="submit"
-          class="w-full bg-green-600 p-4 rounded-lg text-lg font-semibold text-white hover:bg-green-500 transition-colors duration-300">
-          Enviar Mensagem
-        </button>
-      </form>
-
-      <div class="mt-12 text-center">
-        <p class="text-lg text-gray-300">Ou fale comigo nas redes sociais:</p>
-        <div class="flex justify-center space-x-8 mt-6">
-          <a href="https://linkedin.com/in/gabriel-correa-neto"
-            class="text-gray-400 hover:text-blue-500 transition-colors duration-300 transform hover:scale-125"
-            target="_blank" aria-label="LinkedIn" title="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="#projects">
+            Ver projetos
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
             </svg>
           </a>
-
-          <a href="https://github.com/gabrielc-neto"
-            class="text-gray-400 hover:text-gray-200 transition-colors duration-300 transform hover:scale-125"
-            target="_blank" aria-label="GitHub" title="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+          <a class="btn btn--ghost" href="https://drive.google.com/uc?export=download&id=1eCi0nz2b_INW33COd1IhaNoQOS-16bRF">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3v12M7 11l5 5 5-5M4 20h16" />
             </svg>
-          </a>
-
-          <a href="https://wa.me/5597981110322"
-            class="text-gray-400 hover:text-green-500 transition-colors duration-300 transform hover:scale-125"
-            target="_blank" aria-label="WhatsApp" title="WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
-              <path
-                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-            </svg>
+            Baixar currículo
           </a>
         </div>
+
+        <dl class="hero-stats">
+          <div>
+            <dt>Foco</dt>
+            <dd>Full stack + infra</dd>
+          </div>
+          <div>
+            <dt>Stack principal</dt>
+            <dd>React · PHP · Node</dd>
+          </div>
+          <div>
+            <dt>Infra</dt>
+            <dd>Linux · Docker · Nginx</dd>
+          </div>
+          <div>
+            <dt>Formação</dt>
+            <dd>Téc. Informática — IFPR</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ======================================================= sobre === -->
+    <section id="about" class="section section--alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Sobre</span>
+          <h2 class="section-title">Escrevo o código e coloco ele no ar</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Sou desenvolvedor full stack com forte pé em infraestrutura. Na prática, isso quer dizer
+              que não entrego só o repositório: cuido do banco, do servidor, do deploy e do que acontece
+              depois que o sistema entra em produção e as pessoas começam a usar de verdade.
+            </p>
+            <p>
+              Meu dia a dia envolve <strong>sistemas internos de gestão</strong>, portais corporativos e
+              sites institucionais — construídos com <strong>React, PHP/Laravel, Node.js e Firebase</strong>,
+              e mantidos em <strong>VPS Linux com Docker e Nginx</strong>.
+            </p>
+            <p>
+              Gosto de resolver o problema inteiro. Se a aplicação está lenta, eu olho o front, a query e o
+              servidor. Se o deploy é manual e frágil, eu automatizo. Se o legado quebrou, eu migro.
+            </p>
+            <p>
+              Fora do trabalho, atuo como <strong>Product Owner na Enactus AGEAD (UFMS)</strong> — o que me
+              obriga a pensar antes em problema e prioridade, e só depois em código. Isso mudou a forma
+              como eu escuto quem vai usar o sistema.
+            </p>
+
+            <ul class="about-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Sistemas em produção com usuários reais, não só protótipos
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Provisionamento e manutenção de VPS Linux, Nginx e SSL
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Migração de legado e recuperação de aplicações quebradas
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                Ambientes locais reproduzíveis com Docker
+              </li>
+            </ul>
+          </div>
+
+          <div class="terminal reveal" aria-hidden="true">
+            <div class="terminal-bar">
+              <i></i><i></i><i></i>
+              <span>~/gabriel — zsh</span>
+            </div>
+            <div class="terminal-body">
+              <pre><span class="tk-prompt">$</span> whoami --verbose
+
+<span class="tk-key">nome</span>      <span class="tk-str">Gabriel Corrêa</span>
+<span class="tk-key">papel</span>     <span class="tk-str">Full Stack &amp; Infra</span>
+<span class="tk-key">front</span>     <span class="tk-str">React · TypeScript · Tailwind</span>
+<span class="tk-key">back</span>      <span class="tk-str">PHP · Laravel · Node · Python</span>
+<span class="tk-key">dados</span>     <span class="tk-str">MySQL · PostgreSQL · Firestore</span>
+<span class="tk-key">infra</span>     <span class="tk-str">Linux · Docker · Nginx · VPS</span>
+
+<span class="tk-prompt">$</span> uptime
+<span class="tk-com"># aprendendo desde o primeiro
+# "Olá, mundo" — e sem plano de parar</span>
+
+<span class="tk-prompt">$</span> <span class="tk-com">_</span></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================== trajetória === -->
+    <section id="trajetoria" class="section">
+      <div class="wrap">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Trajetória</span>
+          <h2 class="section-title">Por onde passei</h2>
+          <p class="section-lead">
+            Comecei em front-end, passei por pesquisa e por infraestrutura, e hoje junto as duas
+            pontas: desenvolvo os sistemas e cuido dos servidores onde eles rodam.
+          </p>
+        </div>
+
+        <h3 class="trilha-titulo">Experiência</h3>
+
+        <div class="trilha">
+          <article class="marco marco--atual reveal">
+            <div class="marco-periodo">
+              <span class="marco-badge">Atual</span>
+              <time datetime="2026-06">jun/2026 — hoje</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Analista e Desenvolvedor de Sistemas</h3>
+              <p class="marco-org">Pontual Brasil Petróleo</p>
+              <p class="marco-desc">
+                Desenvolvimento e manutenção dos sistemas internos: gestão operacional, canal de
+                integridade, intranet e portais. Cuido também da infraestrutura — VPS Linux,
+                Docker, Nginx e deploy.
+              </p>
+            </div>
+          </article>
+
+          <article class="marco marco--atual reveal">
+            <div class="marco-periodo">
+              <span class="marco-badge">Atual</span>
+              <time>desde 2024</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Desenvolvedor Freelancer</h3>
+              <p class="marco-org">Projetos próprios e de clientes</p>
+              <p class="marco-desc">
+                Sites institucionais, painéis administrativos e pequenos sistemas sob demanda,
+                nas horas vagas — do levantamento com o cliente até a hospedagem.
+              </p>
+            </div>
+          </article>
+
+          <article class="marco marco--atual reveal">
+            <div class="marco-periodo">
+              <span class="marco-badge">Atual</span>
+              <time>liga acadêmica</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Product Owner</h3>
+              <p class="marco-org">Enactus AGEAD — UFMS</p>
+              <p class="marco-desc">
+                Priorização de backlog, definição de escopo e ponte entre as necessidades do
+                projeto e o time de execução.
+              </p>
+            </div>
+          </article>
+
+          <article class="marco reveal">
+            <div class="marco-periodo">
+              <time datetime="2025-12">dez/2025 — mai/2026</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Aprendiz Administrativo — RH</h3>
+              <p class="marco-org">Pontual Brasil Petróleo</p>
+              <p class="marco-desc">
+                Rotinas administrativas de recursos humanos. Foi aqui que mapeei na prática os
+                processos manuais que depois virariam os sistemas que desenvolvo hoje.
+              </p>
+            </div>
+          </article>
+
+          <article class="marco reveal">
+            <div class="marco-periodo">
+              <time datetime="2025-02">fev/2025 — nov/2025</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Técnico de TI — Estágio</h3>
+              <p class="marco-org">UNIFACEAR</p>
+              <p class="marco-desc">
+                Infraestrutura e service desk: atendimento de chamados, manutenção de estações e
+                servidores, e suporte à rede. Foi onde a parte de infra deixou de ser teoria.
+              </p>
+            </div>
+          </article>
+
+          <article class="marco reveal">
+            <div class="marco-periodo">
+              <time datetime="2023-09">set/2023 — set/2024</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Bolsista de Iniciação Científica</h3>
+              <p class="marco-org">PRADI — IFPR</p>
+              <p class="marco-desc">
+                Pesquisa aplicada com bolsa, exercitando método, documentação e apresentação de
+                resultados — hábitos que carrego para a forma como documento sistemas.
+              </p>
+            </div>
+          </article>
+
+          <article class="marco reveal">
+            <div class="marco-periodo">
+              <time datetime="2022-06">jun/2022 — out/2022</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Desenvolvedor Front-end — Freelance</h3>
+              <p class="marco-org">IFAM — Instituto Federal do Amazonas</p>
+              <p class="marco-desc">
+                Primeiro trabalho remunerado com código: desenvolvimento de interfaces web para
+                o instituto.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="trilha-titulo">Formação</h3>
+
+        <div class="trilha">
+          <article class="marco reveal">
+            <div class="marco-periodo">
+              <time datetime="2025-03">mar/2025 — dez/2025</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Desenvolvimento em React — 200h</h3>
+              <p class="marco-org">SENAI</p>
+              <p class="marco-desc">
+                Curso técnico de 200 horas em React — a base do front-end que uso hoje nos
+                sistemas de gestão e na intranet corporativa.
+              </p>
+            </div>
+          </article>
+
+          <article class="marco reveal">
+            <div class="marco-periodo">
+              <time datetime="2021">2021 — 2024</time>
+            </div>
+            <div class="marco-corpo">
+              <h3>Técnico em Informática</h3>
+              <p class="marco-org">IFPR — Instituto Federal do Paraná</p>
+              <p class="marco-desc">
+                Formação técnica com base em lógica de programação, redes, banco de dados e
+                desenvolvimento web.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================== projetos === -->
+    <section id="projects" class="section section--alt">
+      <div class="wrap">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Projetos</span>
+          <h2 class="section-title">O que eu construí e mantenho</h2>
+          <p class="section-lead">
+            Sistemas corporativos em produção e projetos próprios. Alguns são privados por serem
+            de uso interno — nesses, descrevo o escopo e a stack.
+          </p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtrar projetos">
+          <button class="filter" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter" data-filter="prod" aria-pressed="false">Em produção</button>
+          <button class="filter" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter" data-filter="infra" aria-pressed="false">Infra</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- 1 -->
+          <article class="card reveal" data-cat="prod web">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="9" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="5" rx="1.5" />
+                  <rect x="14" y="12" width="7" height="9" rx="1.5" />
+                  <rect x="3" y="16" width="7" height="5" rx="1.5" />
+                </svg>
+              </span>
+              <span class="badge badge--live">Em produção</span>
+            </div>
+            <h3>Sistema de Gestão Operacional</h3>
+            <p class="card-desc">
+              Plataforma interna da Pontual Brasil Petróleo: pedidos, logística, controle de frota,
+              módulo de compras com aprovação de gastos e permissões por cargo (RBAC).
+            </p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Firestore</span>
+              <span class="tag">Cloud Functions</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  aria-hidden="true">
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+                Repositório privado
+              </span>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="card reveal" data-cat="prod web infra">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 3l7 3v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6z" />
+                  <path d="M9.5 12l1.8 1.8L15 10" />
+                </svg>
+              </span>
+              <span class="badge badge--live">Em produção</span>
+            </div>
+            <h3>Canal de Ética e Integridade</h3>
+            <p class="card-desc">
+              Canal de denúncias corporativo com protocolo anônimo, acompanhamento de ocorrências e
+              painel de tratativas. Rodando em VPS própria com ambiente containerizado.
+            </p>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Nginx</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  aria-hidden="true">
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+                Repositório privado
+              </span>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="card reveal" data-cat="prod web">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" />
+                </svg>
+              </span>
+              <span class="badge">Interno</span>
+            </div>
+            <h3>Intranet Corporativa</h3>
+            <p class="card-desc">
+              Portal interno com acesso restrito: validação por faixa de IP da rede corporativa somada a
+              palavra-chave, resolvida em Cloud Function, mais painel administrativo de configuração.
+            </p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Cloud Functions</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  aria-hidden="true">
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+                Repositório privado
+              </span>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="card reveal" data-cat="prod infra">
+            <div class="card-top">
+              <span class="card-icon card-icon--infra">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="6" rx="2" />
+                  <rect x="3" y="14" width="18" height="6" rx="2" />
+                  <path d="M7 7h.01M7 17h.01" />
+                </svg>
+              </span>
+              <span class="badge badge--live">Em produção</span>
+            </div>
+            <h3>Service Desk &amp; Infra em VPS</h3>
+            <p class="card-desc">
+              Provisionamento e administração de VPS Linux: Nginx com múltiplas aplicações sob o mesmo
+              domínio, certificados SSL, acesso por chave SSH e Service Desk (GLPI) para chamados de TI.
+            </p>
+            <div class="tags">
+              <span class="tag">Ubuntu</span>
+              <span class="tag">Nginx</span>
+              <span class="tag">GLPI</span>
+              <span class="tag">SSH</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  aria-hidden="true">
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+                Ambiente corporativo
+              </span>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="card reveal" data-cat="prod web infra">
+            <div class="card-top">
+              <span class="card-icon card-icon--infra">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 20V8l8-5 8 5v12" />
+                  <path d="M9 20v-6h6v6" />
+                </svg>
+              </span>
+              <span class="badge badge--live">Em produção</span>
+            </div>
+            <h3>Migração de Site Institucional</h3>
+            <p class="card-desc">
+              Site corporativo em WordPress legado que quebrou por incompatibilidade de PHP. Reconstruí
+              como site estático — mesmo conteúdo, sem o peso e a superfície de ataque do CMS.
+            </p>
+            <div class="tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Hospedagem</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  aria-hidden="true">
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+                Projeto de cliente
+              </span>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="card reveal" data-cat="web">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 20v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2" />
+                  <circle cx="10" cy="7" r="3.2" />
+                  <path d="M17 4.5a3.2 3.2 0 0 1 0 6M21 20v-2a4 4 0 0 0-3-3.85" />
+                </svg>
+              </span>
+              <span class="badge">Cliente</span>
+            </div>
+            <h3>Site Institucional com Painel</h3>
+            <p class="card-desc">
+              Site para consultoria de RH com painel administrativo próprio: o cliente edita serviços,
+              textos e conteúdo sem depender de desenvolvedor, sem usar CMS pronto.
+            </p>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="card-foot">
+              <span class="card-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  aria-hidden="true">
+                  <rect x="4" y="10" width="16" height="10" rx="2" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+                Repositório privado
+              </span>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="card reveal" data-cat="web">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 7v10M7 12h10" />
+                  <rect x="3" y="3" width="18" height="18" rx="3" />
+                </svg>
+              </span>
+              <span class="badge">Pessoal</span>
+            </div>
+            <h3>Sistema Médico</h3>
+            <p class="card-desc">
+              Meu primeiro sistema web completo: gestão de clínica com agendamento de consultas,
+              cadastro de pacientes e prontuários. O projeto onde eu aprendi back-end de verdade.
+            </p>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="https://github.com/gabrielc-neto/sistema-medico" target="_blank"
+                rel="noopener noreferrer">
+                Ver no GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="card reveal" data-cat="web">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3.2" />
+                  <path d="M12 4.5V3M12 21v-1.5M19.5 12H21M3 12h1.5M17.3 6.7l1-1M5.7 18.3l1-1M17.3 17.3l1 1M5.7 5.7l1 1" />
+                </svg>
+              </span>
+              <span class="badge">Acessibilidade</span>
+            </div>
+            <h3>Espelho Interativo</h3>
+            <p class="card-desc">
+              Versão web de um espelho interativo pensado para pessoas neurodiversas, com rotinas
+              visuais e automação de tarefas do dia a dia.
+            </p>
+            <div class="tags">
+              <span class="tag">PHP</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS3</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="https://github.com/gabrielc-neto/sistema-automatizado" target="_blank"
+                rel="noopener noreferrer">
+                Ver no GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="card reveal" data-cat="web">
+            <div class="card-top">
+              <span class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 11l2 2 4-4" />
+                  <rect x="4" y="4" width="16" height="16" rx="3" />
+                </svg>
+              </span>
+              <span class="badge">Pessoal</span>
+            </div>
+            <h3>Gerenciador de Tarefas</h3>
+            <p class="card-desc">
+              Aplicação de organização de atividades com CRUD completo, escrita em C# para exercitar
+              orientação a objetos fora do ambiente web.
+            </p>
+            <div class="tags">
+              <span class="tag">C#</span>
+              <span class="tag">.NET</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="https://github.com/gabrielc-neto/gerenciador-de-tarefas" target="_blank"
+                rel="noopener noreferrer">
+                Ver no GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17L17 7M9 7h8v8" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="form-note" style="margin-top:32px">
+          Mais repositórios públicos em
+          <a class="accent" href="https://github.com/gabrielc-neto" target="_blank"
+            rel="noopener noreferrer">github.com/gabrielc-neto</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================================== habilidades === -->
+    <section id="skills" class="section">
+      <div class="wrap">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Stack</span>
+          <h2 class="section-title">Ferramentas que eu uso</h2>
+          <p class="section-lead">
+            Organizado pelo que realmente aparece no meu trabalho — da interface até o servidor.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-group reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2.5" y="4" width="19" height="13" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+              Front-end
+            </h3>
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+              <span class="chip">Tailwind CSS</span>
+              <span class="chip">Bootstrap</span>
+              <span class="chip">Vite</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 18l-5-6 5-6M15 6l5 6-5 6" />
+              </svg>
+              Back-end
+            </h3>
+            <div class="chips">
+              <span class="chip">PHP</span>
+              <span class="chip">Laravel</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">Python</span>
+              <span class="chip">C#</span>
+              <span class="chip">Java</span>
+              <span class="chip">C</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <ellipse cx="12" cy="6" rx="8" ry="3" />
+                <path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+              </svg>
+              Dados
+            </h3>
+            <div class="chips">
+              <span class="chip">MySQL</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Firestore</span>
+              <span class="chip">Prisma ORM</span>
+            </div>
+          </div>
+
+          <div class="skill-group skill-group--infra reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="6" rx="2" />
+                <rect x="3" y="14" width="18" height="6" rx="2" />
+                <path d="M7 7h.01M7 17h.01" />
+              </svg>
+              Infra &amp; DevOps
+            </h3>
+            <div class="chips">
+              <span class="chip">Linux (Ubuntu)</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Nginx</span>
+              <span class="chip">VPS</span>
+              <span class="chip">Bash / Shell</span>
+              <span class="chip">Git &amp; GitHub</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">Firebase</span>
+              <span class="chip">Vercel / Netlify</span>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z" />
+                <path d="M20 18v3H6.5" />
+              </svg>
+              Também trabalho com
+            </h3>
+            <div class="chips">
+              <span class="chip">WordPress</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Flutter</span>
+              <span class="chip">BeeWare</span>
+              <span class="chip">GLPI</span>
+            </div>
+          </div>
+
+          <div class="skill-group skill-group--learning reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3l9 5-9 5-9-5z" />
+                <path d="M7 11v5c0 1.5 2.5 3 5 3s5-1.5 5-3v-5" />
+              </svg>
+              Estudando agora
+            </h3>
+            <div class="chips">
+              <span class="chip">Cibersegurança</span>
+              <span class="chip">Next.js</span>
+              <span class="chip">CI/CD</span>
+              <span class="chip">Cloud</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== contato === -->
+    <section id="contact" class="section section--alt">
+      <div class="wrap">
+        <div class="section-head section-head--center">
+          <span class="eyebrow">Contato</span>
+          <h2 class="section-title">Vamos conversar</h2>
+          <p class="section-lead">
+            Projeto novo, freelance ou uma vaga? Me manda uma mensagem — respondo rápido.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="form reveal" action="https://formsubmit.co/gabrielneto327@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="Novo contato pelo portfólio" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://gabrielc-neto.github.io/portfolio/thanks.html" />
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Nome</label>
+                <input id="name" type="text" name="name" placeholder="Como posso te chamar?" required
+                  autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" name="email" placeholder="seu@email.com" required
+                  autocomplete="email" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="6" placeholder="Conta um pouco sobre o que você precisa..."
+                required></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">
+              Enviar mensagem
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 12h15M13 6l6 6-6 6" />
+              </svg>
+            </button>
+
+            <p class="form-note">Enviado com segurança via FormSubmit. Seus dados não são compartilhados.</p>
+          </form>
+
+          <div class="contact-aside reveal">
+            <a class="contact-card" href="mailto:gabrielneto327@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3.5 6.5l8.5 6 8.5-6" />
+              </svg>
+              <span>
+                <b>E-mail</b>
+                <small>gabrielneto327@gmail.com</small>
+              </span>
+            </a>
+
+            <a class="contact-card" href="https://linkedin.com/in/gabrielc-neto" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+              </svg>
+              <span>
+                <b>LinkedIn</b>
+                <small>/in/gabrielc-neto</small>
+              </span>
+            </a>
+
+            <a class="contact-card" href="https://github.com/gabrielc-neto" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+              </svg>
+              <span>
+                <b>GitHub</b>
+                <small>@gabrielc-neto</small>
+              </span>
+            </a>
+
+            <a class="contact-card" href="https://wa.me/5597981110322" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+              </svg>
+              <span>
+                <b>WhatsApp</b>
+                <small>Mensagem direta</small>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== rodapé === -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; <span id="year">2026</span> Gabriel Corrêa<span class="accent">.</span> Feito à mão, sem template.</p>
+      <div class="footer-links">
+        <a href="https://github.com/gabrielc-neto" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/gabrielc-neto" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path
+              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+          </svg>
+        </a>
+        <a href="mailto:gabrielneto327@gmail.com" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="M3.5 6.5l8.5 6 8.5-6" />
+          </svg>
+        </a>
       </div>
     </div>
-  </section>
-  <footer class="bg-gray-950 text-center p-6 text-gray-400">
-    <p>&copy; 2025 Gabriel C<span class="text-green-400">.</span> Todos os direitos reservados.</p>
   </footer>
 
-  <script>
-    const btn = document.getElementById("menu-button");
-    const menu = document.getElementById("mobile-menu");
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  </script>
-  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
-    <script src="./script.js"></script>
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+      stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M6 11l6-6 6 6" />
+    </svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <script src="./script.js" defer></script>
 </body>
+
 </html>
-
-

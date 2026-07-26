@@ -1,133 +1,186 @@
-/* ---- particles.js config ---- */
+/* ==========================================================================
+   Portfólio — Gabriel Corrêa
+   ========================================================================== */
 
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 250,
-      "density": {
-        "enable": true,
-        "value_area": 1900
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
+(function () {
+  "use strict";
+
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var isSmallScreen = window.matchMedia("(max-width: 640px)").matches;
+
+  /* ------------------------------------------------------ menu mobile -- */
+
+  var menuBtn = document.getElementById("menu-button");
+  var mobileMenu = document.getElementById("mobile-menu");
+
+  function closeMenu() {
+    if (!mobileMenu || !menuBtn) return;
+    mobileMenu.hidden = true;
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Abrir menu");
+  }
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", function () {
+      var open = mobileMenu.hidden;
+      mobileMenu.hidden = !open;
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    });
+
+    mobileMenu.addEventListener("click", function (e) {
+      if (e.target.closest("a")) closeMenu();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeMenu();
+    });
+  }
+
+  /* -------------------------------------- header sólido + botão topo -- */
+
+  var header = document.getElementById("site-header");
+  var toTop = document.getElementById("to-top");
+
+  function onScroll() {
+    var y = window.scrollY;
+    if (header) header.classList.toggle("is-stuck", y > 24);
+    if (toTop) toTop.classList.toggle("is-visible", y > 500);
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  if (toTop) {
+    toTop.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+    });
+  }
+
+  /* ------------------------------------------- link ativo na navegação -- */
+
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var sections = navLinks
+    .map(function (a) {
+      return document.querySelector(a.getAttribute("href"));
+    })
+    .filter(Boolean);
+
+  if (sections.length && "IntersectionObserver" in window) {
+    var spy = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          navLinks.forEach(function (a) {
+            a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id);
+          });
+        });
       },
-      "polygon": {
-        "nb_sides": 90
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
+    );
+    sections.forEach(function (s) {
+      spy.observe(s);
+    });
+  }
+
+  /* -------------------------------------------- animação de entrada --- */
+
+  var revealables = document.querySelectorAll(".reveal");
+
+  if (reducedMotion || !("IntersectionObserver" in window)) {
+    revealables.forEach(function (el) {
+      el.classList.add("is-in");
+    });
+  } else {
+    var revealer = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry, i) {
+          if (!entry.isIntersecting) return;
+          setTimeout(function () {
+            entry.target.classList.add("is-in");
+          }, i * 70);
+          obs.unobserve(entry.target);
+        });
       },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 90,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 2,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 5000,
-        "size_min": 0.9,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 12,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      },
-      "onclick": {
-        "enable": false,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 140,
-        "line_linked": {
-          "opacity": 50
+      { rootMargin: "0px 0px -12% 0px", threshold: 0.1 }
+    );
+    revealables.forEach(function (el) {
+      revealer.observe(el);
+    });
+  }
+
+  /* ------------------------------------------- filtro dos projetos ---- */
+
+  var filters = document.querySelectorAll(".filter");
+  var cards = document.querySelectorAll("#projects-grid .card");
+
+  filters.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var value = btn.dataset.filter;
+
+      filters.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+
+      cards.forEach(function (card) {
+        var cats = (card.dataset.cat || "").split(" ");
+        card.hidden = value !== "all" && cats.indexOf(value) === -1;
+      });
+    });
+  });
+
+  /* ------------------------------------------------- ano no rodapé ---- */
+
+  var year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  /* --------------------------------------------- fundo de partículas -- */
+  /* Discreto de propósito: desligado em telas pequenas e com movimento
+     reduzido, porque o custo de render não compensa nesses casos.         */
+
+  function initParticles() {
+    if (reducedMotion || isSmallScreen || typeof window.particlesJS !== "function") return;
+
+    window.particlesJS("particles-js", {
+      particles: {
+        number: { value: 55, density: { enable: true, value_area: 900 } },
+        color: { value: "#4ade80" },
+        shape: { type: "circle" },
+        opacity: { value: 0.28, random: true, anim: { enable: false } },
+        size: { value: 2, random: true, anim: { enable: false } },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#27334a",
+          opacity: 0.5,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 0.7,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false
         }
       },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: false },
+          resize: true
+        },
+        modes: { grab: { distance: 140, line_linked: { opacity: 0.35 } } }
       },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
-
-
-/* ---- stats.js config ---- */
-
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function() {
-  stats.begin();
-  stats.end();
-  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      retina_detect: true
+    });
   }
-  requestAnimationFrame(update);
-};
-requestAnimationFrame(update);
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initParticles);
+  } else {
+    initParticles();
+  }
+})();
