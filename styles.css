@@ -937,21 +937,18 @@ button {
   margin-bottom: 14px;
 }
 
-/* Só o traço do ícone, sem caixa nem preenchimento atrás. */
+/* Só o traço do ícone, sem caixa nem preenchimento atrás.
+   Todos em cinza: o verde fica reservado aos selos e links, que é onde
+   ele carrega informação.                                              */
 .card-icon {
   display: block;
   flex-shrink: 0;
-  color: var(--accent);
+  color: var(--text-muted);
 }
 
 .card-icon svg {
   width: 28px;
   height: 28px;
-}
-
-/* Variante mais discreta, para projetos de infra */
-.card-icon--infra {
-  color: var(--text-muted);
 }
 
 /* Sem preenchimento: só contorno e texto. */
