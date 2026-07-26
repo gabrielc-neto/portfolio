@@ -401,37 +401,6 @@ button {
   max-width: 780px;
 }
 
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 6px 14px 6px 11px;
-  border: 1px solid var(--border-hi);
-  border-radius: 999px;
-  background: var(--surface);
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  margin-bottom: 26px;
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
-  animation: pulse 2.4s infinite;
-}
-
-@keyframes pulse {
-  70% {
-    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
-  }
-}
-
 .hero h1 {
   font-size: clamp(2.4rem, 7vw, 4.1rem);
   letter-spacing: -0.035em;
@@ -747,13 +716,6 @@ button {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-/* Marco que ainda não começou: sem o verde de "ativo". */
-.marco-badge--futuro {
-  background: var(--surface-hi);
-  border-color: var(--border-hi);
-  color: var(--text-dim);
 }
 
 .marco-corpo h3 {

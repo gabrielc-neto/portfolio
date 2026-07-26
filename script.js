@@ -143,16 +143,18 @@
 
     window.particlesJS("particles-js", {
       particles: {
-        number: { value: 55, density: { enable: true, value_area: 900 } },
+        number: { value: 70, density: { enable: true, value_area: 900 } },
         color: { value: "#4ade80" },
         shape: { type: "circle" },
-        opacity: { value: 0.28, random: true, anim: { enable: false } },
-        size: { value: 2, random: true, anim: { enable: false } },
+        opacity: { value: 0.7, random: true, anim: { enable: false } },
+        size: { value: 2.4, random: true, anim: { enable: false } },
         line_linked: {
           enable: true,
           distance: 150,
-          color: "#27334a",
-          opacity: 0.5,
+          // Verde da marca em vez do cinza-azulado: sobre #030712 o cinza
+          // praticamente desaparecia.
+          color: "#4ade80",
+          opacity: 0.25,
           width: 1
         },
         move: {
@@ -172,7 +174,7 @@
           onclick: { enable: false },
           resize: true
         },
-        modes: { grab: { distance: 140, line_linked: { opacity: 0.35 } } }
+        modes: { grab: { distance: 160, line_linked: { opacity: 0.6 } } }
       },
       retina_detect: true
     });
