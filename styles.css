@@ -912,21 +912,21 @@ button {
   color: var(--text-dim);
 }
 
-.card-dica::after {
-  content: "";
-  width: 13px;
-  height: 13px;
-  border: 1px solid currentColor;
-  border-radius: 3px;
+.card-dica svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
   transition: transform 0.3s var(--ease);
 }
 
-.card:hover .card-dica {
+.card:hover .card-dica,
+.card:focus-within .card-dica {
   color: var(--accent);
 }
 
-.card:hover .card-dica::after {
-  transform: rotateY(180deg);
+.card:hover .card-dica svg,
+.card:focus-within .card-dica svg {
+  transform: translateX(4px);
 }
 
 .card-top {
