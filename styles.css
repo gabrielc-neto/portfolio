@@ -749,6 +749,13 @@ button {
   text-transform: uppercase;
 }
 
+/* Marco que ainda não começou: sem o verde de "ativo". */
+.marco-badge--futuro {
+  background: var(--surface-hi);
+  border-color: var(--border-hi);
+  color: var(--text-dim);
+}
+
 .marco-corpo h3 {
   font-size: 1.2rem;
   margin-bottom: 3px;
