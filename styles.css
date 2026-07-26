@@ -792,24 +792,139 @@ button {
   gap: 22px;
 }
 
+/* ---- card com efeito de virada ---------------------------------------- */
+/* A perspectiva fica no container e o giro no filho: girar o elemento que
+   também tem a perspectiva achata o efeito 3D.                            */
+
 .card {
+  perspective: 1400px;
+  /* Altura fixa porque as duas faces são absolutas e saem do fluxo.
+     Dimensionada pela face mais alta (432px), com folga para fontes que
+     caiam em fallback e rendam linhas mais altas.                       */
+  min-height: 460px;
+  cursor: pointer;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  transform-style: preserve-3d;
+  transition: transform 0.7s var(--ease);
+}
+
+/* Foco pelo teclado e clique valem em qualquer dispositivo. O hover fica
+   restrito a ponteiro de verdade: no toque ele "gruda" depois do tap.    */
+.card:focus-within .card-inner,
+.card.esta-virado .card-inner {
+  transform: rotateY(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   padding: 26px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
-  transition: transform 0.28s var(--ease), border-color 0.28s, box-shadow 0.28s;
+  /* Esconde o verso da face enquanto ela está de costas. */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  overflow: hidden;
 }
 
-.card:hover {
-  transform: translateY(-4px);
+.card:hover .card-face,
+.card:focus-within .card-face {
   border-color: var(--border-hi);
   box-shadow: var(--shadow);
 }
 
-.card[hidden] {
-  display: none;
+.card-verso {
+  transform: rotateY(180deg);
+  background: var(--surface-hi);
+  border-color: var(--border-hi);
+  justify-content: space-between;
+}
+
+.card-verso h4 {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.card-lista {
+  display: grid;
+  gap: 11px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  align-content: start;
+}
+
+.card-lista li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.card-lista li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+/* Chamada discreta indicando que o card vira */
+.card-dica {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
+.card-dica::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  transition: transform 0.3s var(--ease);
+}
+
+.card:hover .card-dica {
+  color: var(--accent);
+}
+
+.card:hover .card-dica::after {
+  transform: rotateY(180deg);
 }
 
 .card-top {
@@ -891,16 +1006,6 @@ button {
   font-family: var(--font-mono);
   font-size: 0.74rem;
   color: var(--text-muted);
-}
-
-.card-foot {
-  margin-top: 20px;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  flex-wrap: wrap;
 }
 
 .card-link {
@@ -1262,6 +1367,11 @@ button {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+
+  /* O card ainda vira, mas sem a animação de rotação. */
+  .card-inner {
+    transition: none;
   }
 
   #particles-js {

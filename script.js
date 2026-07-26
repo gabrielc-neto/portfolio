@@ -129,6 +129,17 @@
     });
   });
 
+  /* --------------------------------------------- virada dos cards ----- */
+  /* Em telas de toque não existe hover, então o clique alterna o lado.
+     Links do verso precisam abrir normalmente, sem virar o card de volta. */
+
+  cards.forEach(function (card) {
+    card.addEventListener("click", function (e) {
+      if (e.target.closest("a")) return;
+      card.classList.toggle("esta-virado");
+    });
+  });
+
   /* ------------------------------------------------- ano no rodapé ---- */
 
   var year = document.getElementById("year");
