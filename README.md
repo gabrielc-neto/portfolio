@@ -1,4 +1,4 @@
-# Portfólio — Gabriel Corrêa
+# Portfólio de Gabriel Corrêa
 
 Portfólio pessoal de **Gabriel Corrêa**, desenvolvedor full stack com foco em
 infraestrutura. Página única, estática, sem build e sem dependências de runtime.
@@ -22,8 +22,8 @@ infraestrutura. Página única, estática, sem build e sem dependências de runt
 ## Stack do site
 
 - **HTML5** semântico, com meta tags de SEO, Open Graph e JSON-LD (`schema.org/Person`).
-- **CSS3 puro** com custom properties — sem framework, sem etapa de build.
-- **JavaScript vanilla** — menu, scroll spy, filtro de projetos e animações de entrada.
+- **CSS3 puro** com custom properties, sem framework, sem etapa de build.
+- **JavaScript vanilla**: menu, scroll spy, filtro de projetos e animações de entrada.
 - **particles.js** (CDN) apenas como plano de fundo decorativo.
 - **GitHub Pages** para hospedagem, **FormSubmit** para o formulário de contato.
 
@@ -41,7 +41,7 @@ Todos os demais tons (superfícies, bordas, texto secundário) são degraus deri
 ### Decisões de projeto
 
 - Respeita `prefers-reduced-motion`: animações e partículas são desligadas.
-- Partículas também não carregam em telas pequenas — não vale o custo de render.
+- Partículas também não carregam em telas pequenas, porque não vale o custo de render.
 - Sem imagens pesadas: ícones e favicon são SVG inline.
 
 ---
@@ -80,7 +80,7 @@ Acesse `http://localhost:5500`.
 
 ## Licença
 
-MIT — sinta-se livre para usar como referência.
+MIT. Sinta-se livre para usar como referência.
 
 ---
 

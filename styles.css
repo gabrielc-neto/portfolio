@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Portfólio — Gabriel Corrêa
+   Portfólio de Gabriel Corrêa
    Design tokens + estilos. Sem build, sem CDN de CSS.
    ========================================================================== */
 
@@ -31,7 +31,7 @@
   --on-accent: #030712;
 
   /* Tipografia */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", "Consolas", monospace;
 
   /* Layout */
@@ -86,8 +86,10 @@ h3,
 h4 {
   margin: 0;
   line-height: 1.2;
+  /* Montserrat é geométrica e larga; o tracking negativo compensa nos
+     tamanhos grandes. 700 porque a fonte carrega 400/500/600/700.      */
   letter-spacing: -0.02em;
-  font-weight: 650;
+  font-weight: 700;
 }
 
 p {
@@ -785,7 +787,7 @@ button {
 }
 
 /* min() evita que a trilha fique mais larga que o container em telas
-   estreitas — sem ele, celulares pequenos ganham scroll horizontal. */
+   estreitas. Sem ele, celulares pequenos ganham scroll horizontal. */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
@@ -799,9 +801,9 @@ button {
 .card {
   perspective: 1400px;
   /* Altura fixa porque as duas faces são absolutas e saem do fluxo.
-     Dimensionada pela face mais alta (432px), com folga para fontes que
-     caiam em fallback e rendam linhas mais altas.                       */
-  min-height: 460px;
+     Dimensionada pela face mais alta medida com Montserrat (457px), com
+     folga para o fallback de fonte, que rende linhas mais altas.        */
+  min-height: 490px;
   cursor: pointer;
 }
 
